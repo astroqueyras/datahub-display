@@ -26,11 +26,12 @@
   <img id="allsky-image" alt="Caméra AllSky en direct" />
 
   <script>
-    // Ajoute l'heure actuelle (?t=...) pour forcer le rafraîchissement de l'image
     fetch('./data.json?t=' + new Date().getTime())
       .then(response => response.json())
-      .then(data => {
-        document.getElementById('allsky-image').src = json.data[0].url;
+      .then(json => {
+        if (json.data && json.data.length > 0) {
+          document.getElementById('allsky-image').src = json.data[0].url;
+        }
       })
       .catch(error => console.error('Erreur de chargement AllSky :', error));
   </script>
