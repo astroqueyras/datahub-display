@@ -1,4 +1,4 @@
-name: Mise à jour de la dernière image de la caméra AllSky via l'API DataHub
+name: Mise à jour de la dernière image de la caméra AllSky
 
 on:
   schedule:
