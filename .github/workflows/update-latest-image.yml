@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@://github.com"
-          git add data_allsky_latest.json allsky.png
+          git add data_allsky_latest.json allsky_latest.png
           git commit -m "Mise à jour automatique de l'image AllSky" || exit 0
           git push
