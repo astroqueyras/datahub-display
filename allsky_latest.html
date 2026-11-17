@@ -30,7 +30,7 @@
     fetch('./data.json?t=' + new Date().getTime())
       .then(response => response.json())
       .then(data => {
-        document.getElementById('allsky-image').src = data.url;
+        document.getElementById('allsky-image').src = json.data[0].url;
       })
       .catch(error => console.error('Erreur de chargement AllSky :', error));
   </script>
