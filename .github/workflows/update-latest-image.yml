@@ -25,7 +25,7 @@ jobs:
             --header "X-Auth-Token: $TOKEN" \
             -o data_allsky_latest.json
 
-          IMAGE_URL=$(jq -r '.data.url' data_allsky_latest.json)
+          IMAGE_URL=$(jq -r '.data | first | .url' data_allsky_latest.json)
 
           curl --silent --location \
             --header "X-Auth-Token: $TOKEN" \
