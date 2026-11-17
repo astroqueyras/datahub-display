@@ -20,7 +20,7 @@ jobs:
           TOKEN: ${{ secrets.API_TOKEN }}
         run: |
           curl --silent --request GET \
-            --url 'https://miratlas.com' \
+            --url 'https://data.miratlas.com/api/v3/ism/oppenheimer037/allsky?latest=true' \
             --header 'Accept: application/json' \
             --header "X-Auth-Token: $TOKEN" \
             -o data_allsky_latest.json
@@ -30,7 +30,7 @@ jobs:
           curl --silent --location \
             --header "X-Auth-Token: $TOKEN" \
             "$IMAGE_URL" \
-            -o allsky.png
+            -o allsky_latest.png
 
       - name: Sauvegarder l'image sur GitHub
         run: |
