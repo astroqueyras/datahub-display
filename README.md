@@ -1,2 +1,2 @@
-# datahub-dispay
+# datahub-display
 Display DataHub data
