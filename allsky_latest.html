@@ -26,14 +26,7 @@
   <img id="allsky-image" alt="Caméra AllSky en direct" />
 
   <script>
-    fetch('./data.json?t=' + new Date().getTime())
-      .then(response => response.json())
-      .then(json => {
-        if (json.data && json.data.length > 0) {
-          document.getElementById('allsky-image').src = json.data[0].url;
-        }
-      })
-      .catch(error => console.error('Erreur de chargement AllSky :', error));
+    document.getElementById('allsky-image').src = './allsky_latest.png?t=' + new Date().getTime();
   </script>
 </body>
 </html>
